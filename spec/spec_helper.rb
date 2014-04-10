@@ -9,9 +9,7 @@ require 'byebug'
 require_relative '../environment.rb'
 
 # require the factory girl factories
-Dir.glob("factories/*.rb").each do |file|
-  require_relative file
-end
+FactoryGirl.find_definitions
 
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
